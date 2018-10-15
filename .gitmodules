@@ -1,0 +1,3 @@
+[submodule "mapit"]
+	path = mapit
+	url = https://github.com/mysociety/mapit
