@@ -1,9 +1,9 @@
-MySociety's MapIt in Docker
+mySociety's MapIt in Docker
 ===========================
 This Docker container is made for only MapIt. The database is not created or imported here.
 
-Configuration file is currently simply copied in at the build step of the Docker image,
-so there needs to be a mapit/conf/general.yml when building the image.
+Configuration file should be made available as a Docker volume, see the example
+docker-compose.yml.
 
 Since the database is outside of the container, Postgres needs to be configured to listen to
 the Docker network, and allow authentication on that network as well.
@@ -34,7 +34,7 @@ To run the MapIt service (mapping the host's port 80 to the container's port 800
 docker run -d -p 80:8000 mapit
 ```
 
-Top stop the service:
+To stop the service:
 
 ```
 docker container stop <container-id>
@@ -42,5 +42,4 @@ docker container stop <container-id>
 
 ## TODO ##
 
-  * Use Docker configs (and secrets?).
   * Deploy the Django app to a real web server instead of using the debug server.

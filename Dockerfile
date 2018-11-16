@@ -17,8 +17,7 @@ RUN pip install -r requirements.txt
 COPY mapit .
 RUN pip install -e .
 
-RUN bin/mapit_make_css && \
-	./manage.py collectstatic
+RUN bin/mapit_make_css
 
 EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

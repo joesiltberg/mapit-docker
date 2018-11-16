@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  mapit:
+    image: mapit
+    ports:
+      - "80:8000"
+    volumes:
+      - ./mapit/conf/general.yml-docker:/usr/src/app/conf/general.yml
