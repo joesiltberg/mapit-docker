@@ -28,18 +28,14 @@ You can create an admin account with:
 docker run mapit python manage.py createsuperuser
 ```
 
-To run the MapIt service (mapping the host's port 80 to the container's port 8000):
+To run with docker-compose:
 
 ```
-docker run -d -p 80:8000 mapit
+docker-compose up
 ```
 
-To stop the service:
+To stop
 
 ```
-docker container stop <container-id>
+docker-compose down
 ```
-
-## TODO ##
-
-  * Deploy the Django app to a real web server instead of using the debug server.
